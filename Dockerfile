@@ -3,6 +3,8 @@ FROM ubuntu:precise
 # Install prerequisites
 RUN apt-get update
 RUN apt-get -y install mingw-w64 g++-mingw-w64 git-core bzip2 zip faketime psmisc curl make unzip nsis autoconf2.13 libtool automake pkg-config bsdmainutils
+# See http://stackoverflow.com/a/10373576 why this is needed
+RUN apt-get -y install libboost1.48-dev
 
 # Create build and output directories
 RUN mkdir /build /out
