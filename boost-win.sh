@@ -34,7 +34,7 @@ for BITS in 32 64; do # for architectures
       <cxxflags>-frandom-seed=boost1
       <ranlib>$HOST-ranlib
 ;" > user-config.jam
-  ./bootstrap.sh --without-icu --with-bjam=/usr/bin/bjam
+  ./bootstrap.sh --without-icu
 
   # Workaround: Upstream boost dev refuses to include patch that would allow Free Software cross-compile toolchain to work
   # This patch was authored by the Fedora package developer and ships in Fedora's mingw32-boost.
