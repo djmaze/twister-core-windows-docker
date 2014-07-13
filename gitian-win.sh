@@ -46,4 +46,4 @@ mkdir -p $TEMPDIR
 cd $TEMPDIR
 #tar -xvf $HOME/build/twister/$DISTNAME | sort | tar --no-recursion -cT /dev/stdin --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 mtime="$REFERENCE_DATETIME" | gzip -n > $OUTDIR/src/$DISTNAME
 cd $OUTDIR
-find $OUTDIR | sort | zip -X@ /home/ubuntu/out/twister-win-gitian.zip
+find $OUTDIR | sort | zip -X@ twister-win-gitian.zip
