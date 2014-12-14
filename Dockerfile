@@ -8,6 +8,7 @@ RUN apt-get -y install libboost1.48-dev
 
 # Create build and output directories
 RUN mkdir /build /out
+ENV HOME /
 ENV OUTDIR /out
 WORKDIR /build
 
