@@ -12,7 +12,7 @@ ENV OUTDIR /out
 WORKDIR /build
 
 # Download sources for additional dependencies
-RUN curl -O http://www.openssl.org/source/openssl-1.0.1h.tar.gz \
+RUN curl -L -O http://www.openssl.org/source/openssl-1.0.1h.tar.gz \
          -O http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz \
          -O http://cznic.dl.sourceforge.net/project/libpng/zlib/1.2.8/zlib-1.2.8.tar.gz \
          -O http://garr.dl.sourceforge.net/project/boost/boost/1.55.0/boost_1_55_0.tar.bz2 && \
