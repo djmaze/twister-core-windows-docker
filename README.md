@@ -9,7 +9,7 @@ there in order to get them out of the container.
 Use the precompiled image from the Docker index:
 
     sudo docker pull mazzolino/twister-core-windows-docker
-    sudo docker run -v $(pwd)/target:/target mazzolino/twister-core-windows-docker
+    sudo docker run --rm -v $(pwd)/target:/target mazzolino/twister-core-windows-docker
 
 The output files will be written to the `target` subdirectory of your current folder.
 
