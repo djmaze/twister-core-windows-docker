@@ -5,10 +5,10 @@ RUN apt-get update
 RUN apt-get -y install mingw-w64 g++-mingw-w64 git-core bzip2 zip faketime psmisc curl make unzip nsis autoconf2.13 libtool automake pkg-config bsdmainutils libc6-dev python-dev
 
 # Create build and output directories
-RUN mkdir /build /out
-ENV HOME /
-ENV OUTDIR /out
-WORKDIR /build
+RUN mkdir -p /buildroot/build /buildroot/out
+ENV HOME /buildroot
+ENV OUTDIR /buildroot/out
+WORKDIR /buildroot/build
 
 # Download sources for additional dependencies
 RUN curl -L -O http://www.openssl.org/source/openssl-1.0.1h.tar.gz \
