@@ -33,4 +33,5 @@ ADD gitian-win.sh /tmp/
 RUN /tmp/gitian-win.sh
 
 # Copy output to target folder upon run
-CMD cp -a /out/* /target/
+
+CMD cp -a $OUTDIR/* /target/
